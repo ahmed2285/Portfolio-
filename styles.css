@@ -1,4 +1,4 @@
-* {
+ * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,7 +12,7 @@ body {
 header {
   height: 100vh;
   width: 100%;
-  background-image: url("bg1.jpg");
+  background-image: url("image/bg1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -517,7 +517,9 @@ footer .contact-section .social-media {
   justify-content: space-around;
   align-items: center;
   margin-top: 20px;
-  width: 100%;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 footer .contact-section .social-media img {
   width: 50px;
@@ -758,14 +760,6 @@ body {
     margin: 0;
   }
 
-  main .skills .skills-container {
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 5px;
-    padding: 20px;
-    overflow: hidden;
-  }
-
   main .projects .projects-container {
     grid-template-columns: 1fr;
     padding: 20px;
@@ -783,12 +777,12 @@ body {
     gap: 10px;
     justify-content: center;
   }
-}
 
-footer .contact-section .social-media {
-  flex-direction: row;
-  justify-content: center;
-  gap: 20px;
+  footer .contact-section .social-media {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
 }
 @media only screen and (min-width: 992px) {
   header {
@@ -805,7 +799,7 @@ footer .contact-section .social-media {
     width: 50%;
     margin-left: 50px;
   }
-  
+
   header .hero .hero-text button {
     margin-left: 0;
   }
@@ -815,8 +809,15 @@ footer .contact-section .social-media {
   main .about .me button {
     margin-left: 0;
   }
-}
 
+  main .skills .skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+    margin: auto;
+  }
+}
 @media (max-width: 480px) {
   header .hero .hero-text h1,
   main .about .me h1,
@@ -836,72 +837,71 @@ footer .contact-section .social-media {
     font-weight: bold;
   }
 
+  main .skills .skills-container div h4,
+  .project-card h4 {
+    font-size: 16px;
+  }
+  main .skills {
+    padding: 10px;
+    height: auto;
+  }
+  main .skills .skills-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    gap: 10px;
+  }
+  .exp-item {
+    width: 100px;
+    height: 100px;
+    font-size: 12px;
+  }
+  .experience-container {
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin-left: 40px;
+  }
+  .experience h2 {
+    margin-left: 40px;
+    margin-top: 20px;
+  }
 
-main .skills .skills-container div h4,
-.project-card h4 {
-  font-size: 16px;
-}
-main .skills {
-  padding: 10px;
-  height: auto;
-}
-main .skills .skills-container {
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(8, 1fr);
-  gap: 10px;
-}
-.exp-item {
-  width: 100px;
-  height: 100px;
-  font-size: 12px;
-}
-.experience-container {
-  gap: 10px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  margin-left: 40px;
-}
-.experience h2 {
-  margin-left: 40px;
-  margin-top: 20px;
-}
+  .exp-number {
+    font-size: 22px;
+  }
+  main .projects {
+    padding: 10px;
+    height: auto;
+    margin: auto;
+    margin-top: 15px;
+  }
+  footer .contact-section .social-media {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    padding: auto;
+  }
+  footer .contact-section .social-media img {
+    width: 30px;
+    height: 30px;
+  }
 
-.exp-number {
-  font-size: 22px;
-}
-main .projects {
-  padding: 10px;
-  height: auto;
-  margin: auto;
-  margin-top: 15px;
-}
-footer .contact-section .social-media {
-  flex-direction: row;
-  justify-content: center;
-  gap: 10px;
-  padding: auto;
-}
-footer .contact-section .social-media img {
-  width: 30px;
-  height: 30px;
-}
+  footer .contact-section .social-media a {
+    font-size: 14px;
+  }
 
-footer .contact-section .social-media a {
-  font-size: 14px;
-}
+  .copyright p {
+    font-size: 14px;
+  }
 
-.copyright p {
-  font-size: 14px;
-}
+  footer .contact-section .contact-form input,
+  footer .contact-section .contact-form textarea {
+    width: 100%;
+  }
 
-footer .contact-section .contact-form input,
-footer .contact-section .contact-form textarea {
-  width: 100%;
-}
-
-header .hero .hero-image img,
-main .about .my-image img {
-  width: 90%;
-}
+  header .hero .hero-image img,
+  main .about .my-image img {
+    width: 90%;
+  }
 }

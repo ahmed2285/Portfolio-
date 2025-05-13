@@ -835,7 +835,7 @@ footer .contact-section .social-media {
     width: 70%;
     font-weight: bold;
   }
-}
+
 
 main .skills .skills-container div h4,
 .project-card h4 {
@@ -903,4 +903,5 @@ footer .contact-section .contact-form textarea {
 header .hero .hero-image img,
 main .about .my-image img {
   width: 90%;
+}
 }
